@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main()
+{
+
+int c;
+
+while ((c=getchar()) != EOF) {
+
+if (c == ' ') {
+
+    while ((c = getchar()) == ' ')
+
+    {}  // do nothing?
+
+    putchar(' ');
+
+}
+
+putchar(c);
+
+}
+
+
+}
