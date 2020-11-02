@@ -30,9 +30,15 @@ int getint(int *pn)
 	//c = getch();
 	if(c == '+' || c=='-')
 	{
-		while((c=getch())=='+');
+		while(true)
+		{
+			c = getch();
+			if(!(c == '+' || c == '-'))
+				break;
+		}
 	}
-	
+	//Only one ungetch below is needed since, the above while loop
+	//ensure all +/- characters would be overwritten when a digit comes in 
 	ungetch(c);
 	for(*pn =0;isdigit(c=getch());)
 	{

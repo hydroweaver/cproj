@@ -5,12 +5,14 @@
 int main()
 {
 	initscr();
-	int flag = 1;
+	int c;
 	while(true)
 	{
-		if(!isspace(getch()))
-		break;
-		
+		c = getch();
+		if(!(c== '1' || c=='2'))
+		{
+			break;
+		}
 	}
 	endwin();
 }
